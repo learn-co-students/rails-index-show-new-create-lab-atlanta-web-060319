@@ -1,0 +1,13 @@
+<h1>Create Coupon</h1>
+
+
+<%= render "form" %>
+
+<ul>
+<% if @coupon.save %>
+
+<p>You created a coupon for: <%= @coupon.store %></p>
+<% end %>
+<%= link_to "See All Coupons", coupons_path %>
+
+</ul>
