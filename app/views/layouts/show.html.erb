@@ -1,0 +1,5 @@
+<h1>"<%= @coupon.coupon_code %>" can be used at <%= @coupon.store %></h1>
+
+<%= link_to 'Back', coupons_path %><br>
+<%= link_to 'Edit', edit_coupon_path %><br>
+<%= link_to 'Delete', coupon_path, method: :delete %>

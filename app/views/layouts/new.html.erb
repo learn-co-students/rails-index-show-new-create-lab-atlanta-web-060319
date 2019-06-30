@@ -1,0 +1,14 @@
+<h1>New Coupon Form</h1>
+
+<ul>
+	<% @coupon.errors.full_messages.each do |error| %>
+		<li style="color: red;"><%= error %></li>
+	<% end %>
+</ul>
+
+<%= form_tag coupons_path do %>
+	Code <%= text_field_tag 'coupon[coupon_code]', @coupon.coupon_code %><br><br>
+	Store <%= text_field_tag 'coupon[store]', @coupon.store %><br><br>
+
+	<%= submit_tag 'Submit Coupon' %>
+<% end %>
