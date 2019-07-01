@@ -1,0 +1,8 @@
+<h1>Here's your fucking coupons!!!</h1>
+<ul>
+<%@coupons.each do |coupon|%>
+        
+       <%= link_to coupon.coupon_code, 
+       coupon_path(coupon) %>
+<%end%>
+</ul>
