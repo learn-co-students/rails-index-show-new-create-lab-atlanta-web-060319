@@ -1,0 +1,21 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+<% end %>
+
+<label>Coupon Form</label>
+<%= form_for @coupon do |f| %>
+  <%= f.label :coupon_code %><br>
+  <%= f.text_field :coupon_code %><br>
+
+  <%= f.label :store %><br>
+  <%= f.text_field :store %><br>
+
+  <br>
+ 
+
+  <br>
+  <%= submit_tag 'Submit Coupon' %>
+  
+<% end %>
